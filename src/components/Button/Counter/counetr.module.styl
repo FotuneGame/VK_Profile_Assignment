@@ -1,0 +1,90 @@
+.primary
+    background: #2FB675
+    color: white
+
+.secondary
+    background: #E3DDD9
+    color: black
+
+
+
+.size_8
+    height: 8px
+    width: 8px
+
+.size_12
+    height: 12px
+    width: 12px
+
+.size_16
+    padding: 0px 4px
+    min-height: 16px
+    min-width: 16px
+    font-size: 11px
+
+.size_20
+    padding: 0px 4px
+    min-height: 20px
+    min-width: 20px
+    font-size: 13px
+
+.size_24
+    padding: 0px 6px
+    min-height: 24px
+    min-width: 24px
+    font-size: 15px
+
+
+
+.live_indicator
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: inherit;
+
+.live_indicator p
+    z-index: 2;
+    text-align: center;
+
+
+.dot_border_1
+  border: 1px solid white
+
+.dot_border_2
+  border: 2px solid white
+
+.dot_border_3
+  border: 3px solid white
+
+
+
+.dot
+    position: absolute
+    border-radius: 999px
+
+
+.pulse
+    position: absolute
+    border-radius: 999px
+
+
+
+.pulse
+  animation-name: red-dot-scale-fade
+  animation-iteration-count: infinite
+  animation-duration: 2s
+
+.two
+  animation-delay: 0.25s
+
+@keyframes red-dot-scale-fade
+  0%
+    opacity: 0.5
+    transform: scale(1)
+  50%
+    opacity: 0
+    transform: scale(3)
+  100%
+    opacity: 0
+    transform: scale(3)

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": true,
+    "target": "ES6",
+    "jsx": "react-jsx", // изменил было react => react-jsx для не указания в index.tsx import React from "react";
+    "allowJs": true,
+    "moduleResolution": "node",
+
+    //изменил для webpack.config.ts
+    "module": "ESNext",
+    // import * as ... from ... => import ... from ... (настройка дефолтного импорта)
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+
+    //настройка алиасов (псевдонимы путей)
+    "baseUrl": ".",
+    "paths": {
+      "@/*":["./src/*" ],
+    }
+  },
+
+  //изменил для webpack.config.ts
+  "ts-node": {
+    "compilerOptions": {
+      "module": "CommonJS"
+    }
+  }
+}

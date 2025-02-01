@@ -1,0 +1,101 @@
+.btn
+    overflow: hidden
+    position: relative;
+    border: 0px solid black
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: all 0.5s cubic-bezier(0, -0.3, 0.5, 1.3)
+    font-size: 17px;
+
+.btn::after
+    opacity: 0
+    content: ""
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s cubic-bezier(0, -0.3, 0.5, 1.3)
+
+
+
+.focused
+    outline: 3px solid #0099FF
+    outline-offset: 3px
+
+.disabled::after
+    opacity: 0.64
+
+
+.active
+    opacity: 0.8
+    transform: scale(0.95)
+.active::after
+    opacity: 0.2
+    
+
+
+.btn:hover
+    opacity: 0.88
+.btn:hover::after
+    opacity: 0.12
+
+.btn:active
+    opacity: 0.8
+    transform: scale(0.95)
+.btn:active::after
+    opacity: 0.2
+
+.btn:disabled
+    opacity: 0.36
+.btn:disabled::after
+    opacity: 0.64
+
+.btn:focus-visible
+    outline: 3px solid #0099FF
+    outline-offset: 3px
+
+
+
+
+
+.btn_primary
+    background: #FF7700
+    color: white
+
+.btn_primary::after
+    background: white
+
+.btn_secondary
+    background: #F0EDEB
+    color: black
+
+.btn_secondary::after
+    background: black
+
+
+
+
+.size_28
+    min-width: 96px
+    height: 28px
+    padding: 6px 10px
+    gap: 8px
+    border-radius: 9.3px
+
+    
+.size_36
+    min-width: 112px
+    height: 36px
+    padding: 8px 12px
+    gap: 8px
+    border-radius: 12px
+
+
+.size_56
+    min-width: 131px
+    height: 56px
+    padding: 16px 16px
+    gap: 8px
+    border-radius: 16px
