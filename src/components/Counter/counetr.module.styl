@@ -1,10 +1,20 @@
+@import ("../../index.styl")
+
 .primary
     background: #2FB675
     color: white
 
+
 .secondary
     background: #E3DDD9
     color: black
+
+.live_indicator_primary p
+  color: white
+
+.live_indicator_secondary p
+  color: black
+
 
 
 
@@ -18,22 +28,24 @@
 
 .size_16
     padding: 0px 4px
-    min-height: 16px
-    min-width: 16px
+    height: 16px
+    width: 16px
     font-size: 11px
 
 .size_20
     padding: 0px 4px
-    min-height: 20px
-    min-width: 20px
+    height: 20px
+    width: 20px
     font-size: 13px
 
 .size_24
     padding: 0px 6px
-    min-height: 24px
-    min-width: 24px
+    height: 24px
+    width: 24px
     font-size: 15px
 
+.padding_0
+  padding: 0px
 
 
 .live_indicator
@@ -47,7 +59,9 @@
     z-index: 2;
     text-align: center;
 
-
+.dot_border_0
+  border: 1px solid transparent
+  
 .dot_border_1
   border: 1px solid white
 
@@ -61,12 +75,12 @@
 
 .dot
     position: absolute
-    border-radius: 999px
+    border-radius: 100%
 
 
 .pulse
     position: absolute
-    border-radius: 999px
+    border-radius: 100%
 
 
 

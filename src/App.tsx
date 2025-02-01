@@ -1,24 +1,18 @@
 import React from 'react';
-import "./App.module.styl";
+import "./App.styl";
 import Button from './components/Button';
+import Counter from './components/Counter';
+import {handlerButton} from "./stories/utils";
 
 function App() {
 
-  const handlerButton = async () =>{
-    const result = await new Promise((resolve, reject) => {
-        setTimeout(() => {
-            resolve('Выполнено!');
-        },  3000);
-    });
-  }
 
   return (
     <div className="App">
         <Button callback={handlerButton} >
           <Button.Label>Что сделать</Button.Label>
-          <Button.Counter size={16} pulse={true} >120</Button.Counter>
+          <Counter>120</Counter>
         </Button>
-
     </div>
   );
 }

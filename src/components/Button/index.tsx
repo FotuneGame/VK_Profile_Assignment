@@ -2,7 +2,6 @@ import React, {useState} from "react";
 import {createClassNameBtn} from "./util";
 import {ButtonContext} from "./context";
 import {IPropsButton} from "./types"
-import Counter from "./Counter";
 import Loader from "./Loader";
 import Label from "./Label";
 
@@ -18,7 +17,7 @@ function Button ({
     focused=false
 } : IPropsButton){
 
-    const [loading,setLoading] = useState<boolean>(state==='loading');
+    const [loading,setLoading] = useState<boolean>(state==="loading");
     const className = createClassNameBtn({children,callback,style,size,state,focused});
 
     const wrapperClick = async () =>{
@@ -38,7 +37,7 @@ function Button ({
                 disabled={state==="disabled"}
                 onClick={()=>{wrapperClick()}}
             >
-                {loading ? <Loader size={size} style={style}/> : children}
+                {(loading || state==="loading") ? <Loader size={size} style={style}/> : children}
             </button>
         </ButtonContext.Provider>
     );
@@ -46,6 +45,5 @@ function Button ({
 
 
 
-Button.Counter = Counter;
 Button.Label = Label; 
 export default Button;
